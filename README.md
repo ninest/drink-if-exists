@@ -12,7 +12,7 @@
 </p>
 
 ## 🛠 Build setup
-[Install](https://deno.land/#installation) Deno, then clone or fork this repository. Run 
+[Install Deno](https://deno.land/#installation), then clone or fork this repository. Run 
 
 ```
 deno run mod.ts
