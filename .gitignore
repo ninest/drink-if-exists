@@ -27,3 +27,4 @@ tools/node_modules/
 
 target/
 .deno_plugins/
+.vercel

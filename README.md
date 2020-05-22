@@ -12,6 +12,11 @@
   <img src="https://img.shields.io/github/license/ninest/drink-if-exists?style=flat-square" alt="MIT" />
 </p>
 
+To play the game, run the following command:
+```
+deno run --allow-net http://drink-if-exists.now.sh/mod.ts
+```
+
 ## 🛠 Build setup
 [Install Deno](https://deno.land/#installation), then clone or fork this repository. Run 
 
