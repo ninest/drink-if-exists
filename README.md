@@ -34,16 +34,18 @@ The app is located in the `src/` folder, with the entry point being `mod.ts`.
 
 ## Credits
 
-Original idea from
+1. Original idea from
 
-> Drinking game for npm users:\
-  ➀ Think of a noun\
-  ➁ npm install \<noun>\
-  ➂ If it installs - drink!\
+    > Drinking game for npm users:\
+      ➀ Think of a noun\
+      ➁ npm install \<noun>\
+      ➂ If it installs - drink!\
 
-[tweet from @sindresorhus](https://twitter.com/sindresorhus/status/515511151669805056?lang=en) on Sep 26, 2014
+    [tweet from @sindresorhus](https://twitter.com/sindresorhus/status/515511151669805056?lang=en) on Sep 26, 2014
 
-Inspiration from [npmdrinkinggame.party](https://npmdrinkinggame.party/) by [@NikkitaFTW](https://twitter.com/NikkitaFTW)
+2. Inspiration from [npmdrinkinggame.party](https://npmdrinkinggame.party/) by [@NikkitaFTW](https://twitter.com/NikkitaFTW)
+
+3. Inspiration from [sipit](https://www.npmjs.com/package/sipit) by [bnb](https://github.com/bnb)
 
 ## License
 MIT
