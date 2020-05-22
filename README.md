@@ -21,8 +21,9 @@ deno run --allow-net http://drink-if-exists.now.sh/mod.ts
 
 ## 🥴 How to play
 Enter an english word:
-- Take a *sip* 🍷 if an **NPM** package under the name exists
-- Take a *shot* 🥃 if a **Deno** package under the name exists
+- Take a *sip* 🍷 if an **NPM** package under the name exists, or
+- Take a *shot* 🥃 if a **Deno** package under the name exists.
+- Write and maintain a package under the name if it doesn't exist.
 
 ## 🛠 Build setup
 [Install Deno](https://deno.land/#installation), then clone or fork this repository. Run 
@@ -51,6 +52,12 @@ The app is located in the `src/` folder, with the entry point being `mod.ts`.
 2. Inspiration from [npmdrinkinggame.party](https://npmdrinkinggame.party/) by [@NikkitaFTW](https://twitter.com/NikkitaFTW)
 
 3. Inspiration from [sipit](https://www.npmjs.com/package/sipit) by [bnb](https://github.com/bnb)
+
+4. This tweet
+
+    > ④ If it doesn't, create that module and forever be responsible for maintaining it. Drink.
+
+    [tweet from @clarler](https://twitter.com/clarler/status/515512435550486529) on Sep 26, 2014
 
 ## License
 MIT
