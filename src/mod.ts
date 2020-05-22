@@ -1,4 +1,4 @@
-import { bold, italic, yellow } from './deps.ts';
+import { bold, italic, yellow, blue } from './deps.ts';
 
 import { input } from './utils.ts';
 import { getNpmPackage } from './package_service.ts';
@@ -19,7 +19,7 @@ console.log(helpText);
 
 
 while (true){
-  let word = await input(prompt);
+  let word = (await input(prompt))?.trim();
 
   // exit condition
   if (word === '-1') break;
@@ -34,9 +34,10 @@ while (true){
   const npmPackage = await getNpmPackage(word);
 
   if (npmPackage.exists === true) {
-    // console.log(`${word} exists: ${npmPackage.description}.`)
+    console.log(`${italic(npmPackage.result.package.name)}: ${blue(npmPackage.result.package.description)}`);
+    console.log('\nTake a sip 🍷')
   } else {
-    // console.log(`${word} does not exist! You should write it and maintain it.`)
+    console.log(`${italic(word!)} does not exist! You should write it and maintain it.`)
   }
   
   // leave a line at the end

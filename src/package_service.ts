@@ -5,16 +5,18 @@ export const getNpmPackage = async (word: string = '') => {
   const response = await fetch(url);
   if (response.ok) {
     let json = await response.json();
-    const result = json.results[0]
-    if (result.package.name.toLowerCase() === word.toLowerCase()) {
-      return {
-        exists: true,
-        result: result
-      };
-    } else {
-      console.log('nag')
-      return { exists: false }
+
+    // check if there are results
+    if (json.results.length > 1){
+      const result = json.results[0]
+      if (result.package.name.toLowerCase() === word.toLowerCase()) {
+        return {
+          exists: true,
+          result: result
+        };
+      } 
     }
+    return { exists: false }
   } else {
     return { error: true }
   }
@@ -22,5 +24,5 @@ export const getNpmPackage = async (word: string = '') => {
 
 
 // example
-// const a = await getNpmPackage('word')
+// const a = await getNpmPackage('help me pleae')
 // console.log(a);
