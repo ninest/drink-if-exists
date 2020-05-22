@@ -17,9 +17,15 @@ To play the game, run the following command:
 deno run --allow-net http://drink-if-exists.now.sh/mod.ts
 ```
 
+## 🥴 How it works
+The [NPMS API](https://npms.io/) was used to find NPM packages. To check if a Deno package exists, [database.json](https://github.com/denoland/deno_website2/blob/master/database.json) from [deno.land/x](https://deno.land/x/) (third party modules) is scraped.
+
 ## 🛠 Build setup
 [Install Deno](https://deno.land/#installation), then clone or fork this repository. Run 
 
 ```
-deno run mod.ts
+deno run --allow-net mod.ts
 ```
+
+### Folder structure
+The app is located in the `src/` folder, with the entry point being `mod.ts`.
