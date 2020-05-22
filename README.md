@@ -1,4 +1,5 @@
-<h1 align="center">🍷 drink if exists</h1>
+<h1 align="center">drink if exists</h1>
+<p align="center"><img height="200" alt="icon" src="./readme-assets/icon.png" /></p>
 <p align="center">The NPM drinking game recreated and cli-ified with Deno with Deno</p>
 
 <p align="center">
