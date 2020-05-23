@@ -41,7 +41,7 @@ The [NPMS API](https://npms.io/) was used to find NPM packages. To check if a De
 ### Folder structure
 The app is located in the `src/` folder, with the entry point being `mod.ts`.
 
-## Credits
+## 👏 Credits
 
 1. Original idea from
 
