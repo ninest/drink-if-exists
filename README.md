@@ -10,6 +10,9 @@
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="Make a PR" />
   </a>
   <img src="https://img.shields.io/github/license/ninest/drink-if-exists?style=flat-square" alt="MIT" />
+  <a href="https://www.buymeacoffee.com/ninest">
+    <img src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square" alt="Buy Me A Coffee">
+  </a>
 </p>
 
 <p align="center"><img width="690" alt="demo" src="./readme-assets/demo.png" /></p>
@@ -59,5 +62,11 @@ The app is located in the `src/` folder, with the entry point being `mod.ts`.
 
     [tweet from @clarler](https://twitter.com/clarler/status/515512435550486529) on Sep 26, 2014
 
-## License
+## ♥️ Support
+If you liked this project, consider supporting by
+- ⭐️ Starring the repository
+- 🎒 Checking out my other [projects](https://github.com/ninest)
+- ☕️ Buying me [coffee](https://www.buymeacoffee.com/ninest)
+
+## 📜 License
 MIT
