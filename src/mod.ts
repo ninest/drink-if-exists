@@ -38,7 +38,12 @@ while (true) {
 
   if (npmPackage.exists) {
     console.log('It exists on NPM:')
-    console.log(`${italic(white(npmPackage.result?.name!))} (NPM): ${blue(npmPackage.result?.desc!)}`);
+
+    // not all NPM packages have a description
+    const name = npmPackage.result?.name ?? '';
+    const desc = npmPackage.result?.desc ?? 'no description provided'
+
+    console.log(`${italic(white(name))} (NPM): ${blue(desc)}`);
   } else {
     console.log(`${italic(word!)} does not exist on NPM! You should write it and maintain it.`);
   }
@@ -48,8 +53,10 @@ while (true) {
     if (!npmPackage.exists) console.log('\n');
 
     // if it ALSO exists here, put a line above the message and put 'also' in the string
-    if (npmPackage.exists) console.log(`\nIt ${italic('also')} exists on deno.land/x:`);
-    else console.log('It exists on deno.land/x:');
+    if (npmPackage.exists) 
+      console.log(`\nIt ${italic('also')} exists on deno.land/x:`);
+    else
+      console.log('It exists on deno.land/x:');
     console.log(`${italic(white(denoPackage.result?.name!))} (deno.land/x): ${blue(denoPackage.result?.desc!)}`);
   }
 
