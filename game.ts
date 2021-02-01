@@ -1,7 +1,6 @@
-import { bold, italic, blue, bgYellow, bgRed, white } from "./deps.ts";
+import { bold, italic, blue, bgYellow, bgRed, white, black } from "./deps.ts";
 
-import { input } from "./utils.ts";
-// import { getNpmPackage, getDenoPackage } from "./package_service.ts";
+import { input, hr } from "./utils.ts";
 import { helpText, title } from "./resources.ts";
 import { getNpmPackage, getDenoPackage } from "./package.ts";
 
@@ -14,14 +13,16 @@ export const startGame = async () => {
   while (true) {
     let word = (await input(prompt))?.trim();
 
-    // exit condition
+    // Exit condition
     if (word === "-1") break;
 
-    // make sure input is valid
+    // Make sure an input is provided
     if (word?.trim() == "") {
-      console.log("^ That's not a valid package name");
+      console.log(italic("^ That's not a valid package name\n"));
       continue;
     }
+
+    console.log();
 
     const npmPackageRes = await getNpmPackage(word!);
     const denoPackageRes = await getDenoPackage(word!);
@@ -32,12 +33,6 @@ export const startGame = async () => {
 
     const npmPackage = npmPackageRes.data;
     const denoPackage = denoPackageRes.data;
-
-    // console.log(npmPackage.data);
-    // console.log(denoPackage.data);
-
-    // Leave line
-    console.log();
 
     if (npmPackage.exists) {
       console.log("It exists on NPM:");
@@ -76,12 +71,12 @@ export const startGame = async () => {
     */
 
     if (denoPackage.exists) {
-      console.log(`\n${bgYellow(bold(white(" Take a shot 🥃 ")))}`);
+      console.log(`\n${bgYellow(bold(black(" Take a shot 🥃 ")))}`);
     } else if (npmPackage.exists) {
       console.log(`\n${bgRed(bold(white(" Take a sip 🍷 ")))}`);
     }
 
-    // leave lines at the end
-    console.log("\n\n");
+    // Leave a line an show a divider
+    console.log(`\n${hr()}`);
   }
 };
