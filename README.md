@@ -1,11 +1,12 @@
 <h1 align="center">drink if exists</h1>
-<p align="center"><img height="200" alt="icon" src="./readme-assets/icon.png" /></p>
+<p align="center"><img height="200" alt="icon" src="./assets/icon.png" /></p>
 <p align="center">The NPM drinking game recreated and cli-ified with Deno with Deno</p>
 
 <p align="center">
   <a href="https://deno.land/">
     <img src="https://img.shields.io/badge/Made%20With-Deno-black?style=flat-square&" alt="Made with Deno" />
   </a>
+
   <a href="http://makeapullrequest.com/">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="Make a PR" />
   </a>
@@ -15,14 +16,14 @@
   </a>
 </p>
 
-<p align="center"><img width="690" alt="demo" src="./readme-assets/demo.png" /></p>
+<p align="center"><img width="690" alt="demo" src="./assets/demo.png" /></p>
 
 To play the game, run the following command:
 ```
 deno run --allow-net http://drink-if-exists.now.sh/mod.ts
 ```
 
-## 🥴 How to play
+## How to play
 Enter an english word:
 - Take a *sip* 🍷 if an **NPM** package under the name exists, or
 - Take a *shot* 🥃 if a **Deno** package under the name exists.
@@ -41,7 +42,7 @@ The [NPMS API](https://npms.io/) was used to find NPM packages. To check if a De
 ### Folder structure
 The app is located in the `src/` folder, with the entry point being `mod.ts`.
 
-## 👏 Credits
+## Credits
 
 1. Original idea from
 

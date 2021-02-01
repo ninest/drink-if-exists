@@ -28,7 +28,6 @@ export const getNpmPackage = async (word: string = '') => {
 
 // example
 // const a = await getNpmPackage('help me pleae')
-// console.log(a);
 
 export const getDenoPackage = async (word: string = '') => {
   const url = `https://raw.githubusercontent.com/denoland/deno_website2/master/database.json`
@@ -51,5 +50,3 @@ export const getDenoPackage = async (word: string = '') => {
     return { error: true }
   }
 }
-
-getDenoPackage('a1');
