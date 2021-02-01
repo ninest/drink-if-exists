@@ -1,17 +1,9 @@
-import {
-  bold,
-  italic,
-  yellow,
-  blue,
-  black,
-  bgYellow,
-  bgRed,
-  white,
-} from "./deps.ts";
+import { bold, italic, blue, bgYellow, bgRed, white } from "./deps.ts";
 
 import { input } from "./utils.ts";
-import { getNpmPackage, getDenoPackage } from "./package_service.ts";
+// import { getNpmPackage, getDenoPackage } from "./package_service.ts";
 import { helpText, title } from "./resources.ts";
+import { getNpmPackage, getDenoPackage } from "./package.ts";
 
 export const startGame = async () => {
   const prompt = bold("Enter a word: ");
@@ -28,20 +20,31 @@ export const startGame = async () => {
     // make sure input is valid
     if (word?.trim() == "") {
       console.log("^ That's not a valid package name");
+      continue;
     }
 
-    const npmPackage = await getNpmPackage(word);
-    const denoPackage = await getDenoPackage(word);
+    const npmPackageRes = await getNpmPackage(word!);
+    const denoPackageRes = await getDenoPackage(word!);
 
-    // leave a line
+    if (npmPackageRes.error || denoPackageRes.error) {
+      console.log("Please check your network connection");
+    }
+
+    const npmPackage = npmPackageRes.data;
+    const denoPackage = denoPackageRes.data;
+
+    // console.log(npmPackage.data);
+    // console.log(denoPackage.data);
+
+    // Leave line
     console.log();
 
     if (npmPackage.exists) {
       console.log("It exists on NPM:");
 
-      // not all NPM packages have a description
-      const name = npmPackage.result?.name ?? "";
-      const desc = npmPackage.result?.desc ?? "no description provided";
+      // Not all NPM packages have a description
+      const name = npmPackage?.name ?? "";
+      const desc = npmPackage?.description ?? "No description provided";
 
       console.log(`${italic(white(name))} (NPM): ${blue(desc)}`);
     } else {
@@ -61,8 +64,8 @@ export const startGame = async () => {
         console.log(`\nIt ${italic("also")} exists on deno.land/x:`);
       else console.log("It exists on deno.land/x:");
       console.log(
-        `${italic(white(denoPackage.result?.name!))} (deno.land/x): ${blue(
-          denoPackage.result?.desc!
+        `${italic(white(denoPackage?.name!))} (deno.land/x): ${blue(
+          denoPackage?.description ?? ""
         )}`
       );
     }
