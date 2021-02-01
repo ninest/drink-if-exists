@@ -36,7 +36,7 @@ Enter an english word:
 deno run --allow-net mod.ts
 ```
 
-The [NPMS API](https://npms.io/) was used to find NPM packages. To check if a Deno package exists, [database.json](https://github.com/denoland/deno_website2/blob/master/database.json) from [deno.land/x](https://deno.land/x/) (third party modules) is scraped.
+The [NPMS API](https://npms.io/) was used to find NPM packages. [Deno's third-party modules API](https://api.deno.land) is used to find Deno packages
 
 
 ### Folder structure
