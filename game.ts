@@ -1,17 +1,17 @@
 import { bold, italic, blue, bgYellow, bgRed, white, black } from "./deps.ts";
 
-import { input, hr } from "./utils.ts";
+import { hr } from "./utils.ts";
 import { helpText, title } from "./resources.ts";
 import { getNpmPackage, getDenoPackage } from "./package.ts";
 
 export const startGame = async () => {
-  const prompt = bold("Enter a word: ");
+  const wordPrompt = bold("Enter a word:");
 
   console.log(title);
   console.log(helpText);
 
   while (true) {
-    let word = (await input(prompt))?.trim();
+    const word = window.prompt(wordPrompt)?.trim();
 
     // Exit condition
     if (word === "-1") break;
